@@ -13,15 +13,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
 .w3-sidebar {width: 120px;background: #222;}
+
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+@media only screen and (max-width: 990px) {#main {margin-left: 0; margin-top:20px}}
 </style>
 <body class="w3-light-gray">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center w3-deep-purple" style="width:10%">
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-hide-medium w3-center w3-deep-purple" style="width:120px">
   <p class="w3-padding-64"> </p>
   <a href="#about" class="w3-bar-item w3-button w3-padding-32 w3-hover-light-gray">
     <i class="fa fa-user w3-xxlarge"></i>
@@ -42,7 +43,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+<div class="w3-top w3-hide-large" id="myNavbar">
   <div class="w3-bar w3-deep-purple w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
     <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
@@ -63,11 +64,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <!-- <i class="fab fa-linkedin w3-padding-small w3-large w3-hover-opacity"></i> -->
         <a href="https://orcid.org/0000-0002-1857-7874" class="fab fa-orcid w3-padding-small w3-light-gray w3-large w3-hover-opacity"></a>
         <a href="mailto:p.m.higgins@ed.ac.uk" class="fa fa-envelope w3-padding-small w3-light-gray w3-large w3-hover-opacity"></a>
+        <div class='w3-padding-large'>
+        <p class='w3-padding-large w3-large'> I'm in the final year of my PhD in Astrobiology at the University of Edinburgh. My research is focussed on assessing planetary habitability using computational methods and spacecraft/laboratory data. With this, we can estimate whether any form of life could survive or even thrive based purely on local chemistry, geology, and physical conditions. I have lead supervision of BSc / MSc student projects, and have some experience teaching and lecturing on undergraduate level courses.<br><br>
 
-        <p class='w3-padding-large'> Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        I completed my MSci in Natural Sciences at Lancaster University in 2017. I focussed on physics and chemistry, with my masters thesis on neutral atom dynamics in Neptune's magnetosphere.
     </p>
+</div>
       </div>
 
       <div class="w3-third w3-left">
@@ -88,9 +90,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <div class="w3-twothird w3-container">
           <h2 class='w3-padding-large w3-center'>NutMEG</h2>
           <!-- if you want some vspace   <hr style="width:200px" class="w3-opacity"> -->
-          <p class='w3-padding-large'> Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <p class='w3-padding-large'><a href='https://github.com/pmhiggins/NutMEG/'>NutMEG</a> [Nutrients, Maintenance, Energy and Growth] is a python module for predicting the growth behaviour of microbial organisms in astrobiology. It’s designed to estimate the energetic availability through local chemistry and the cost of defending against extreme or adverse conditions to work out whether an environment could be habitable and how biology could behave there.
+
+          You can check out <a href='https://nutmeg-astrobiology.readthedocs.io/'>NutMEG's documentation</a>, or go straight to the code on <a href='https://github.com/pmhiggins/NutMEG/'>GitHub</a>.
           </p>
         </div>
 
@@ -100,9 +102,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
         <div class="w3-half w3-container">
             <h2 class='w3-padding-large w3-center'>Surviving in Extremes</h2>
-          <p class='w3-padding-large'> Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <p class='w3-padding-large'> The more 'extreme' an environment is, the more difficult it is to survive in. For example, at high temperatures or adverse pH it becomes more difficult for life to maintain the structure of important biomolecules like proteins and DNA.
+          <br><br>
+          One method I employ to predict the energetic costs of survival is considering the potential adverse effects of the local environment. The cumulative energy costs of multiple extremes and poor microbial adaptation results in large deficits to overcome, as shown in the animation - just one combination of several potential adaptations NutMEG can simulate.
           </p>
         </div>
         <div class='w3-half w3-container w3-padding-16'>
@@ -118,15 +120,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <div class="w3-row w3-content w3-justify w3-padding-32">
 
-        <div class='w3-third w3-container'>
+        <div class='w3-third w3-container w3-center'>
             <img src="fig/Enc8.5.png" alt="Enceladus" class="w3-image">
             <img src="fig/EncLegend.png" alt="Enceladus Legend" class="w3-image" width=200>
         </div>
         <div class="w3-twothird w3-container">
             <h2 class='w3-padding-large w3-center'>Enceladus</h2>
-          <p class='w3-padding-large'> Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <p class='w3-padding-large'>
+          Enceladus has a large subsurface ocean of water, and the Cassini spacecraft’s observations point to the existence of CH4, CO2, and H2 - the ingredients of the methanogenesis metabolism - as well as various salts, silicates and alkanes. These make it a primary candidate in for extraterrestrial life in the solar system. However, other key parameters of the ocean which we need to know to determine its habitability are difficult to calculate, such as the pH and composition. I have been using NutMEG to predict what possible combinations of Enceladus' parameter space could be habitable to life, as-we-know-it or otherwise.
+          <br><br>
+          The figure here shows an early estimation of the energy available via methanogenesis and the energy conservable by a typical methanogen in an Enceladean ocean at pH 8.6 which I have presented at <a href='#publications' >numerous conferences</a>. Our predictions have come a long way since this - on to biomass and biosignature estimates - so check back for updates!
           </p>
           <!-- uncomment to add progress bars
           <p class="w3-padding-large w3-wide">Photography</p>
