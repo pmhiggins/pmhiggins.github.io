@@ -18,6 +18,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 990px) {#main {margin-left: 0; margin-top:20px}}
+
+table, th, td {
+  border-bottom: 1px solid #ddd;
+}
+th, td {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+th {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 </style>
 <body class="w3-light-gray">
 
@@ -210,9 +225,35 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <li class='w3-hover-gray'>EANA (2018), Oral Presentation: “A new model to estimate energy flow and biomass in terrestrial and extraterrestrial environments” <br><b>Won student contest 2018 for best talk</b>. </li>
       <li class='w3-hover-gray'>GMBN RiP (2018), Poster Presentation: “A new model to estimate energy flow and biomass in terrestrial and extraterrestrial environments”. </li>
       <li><h2>Publications</h2></li>
-      <li class='w3-hover-gray'> <b>Higgins, P.M.</b> & Cockell C.S. (2020) "A bioenergetic model to predict habitability, biomass and biosignatures in astrobiology and extreme conditions", <i>J. R. Soc. Interface</i> <b>17</b> 20200588 <a href='http://doi.org/10.1098/rsif.2020.0588'>doi</a> </li>
-      <li class='w3-hover-gray'> Cockell C.S., <b>Higgins P.M.</b>, Johnstone, A.A. (<i>accepted</i>) "Biologically Available Chemical Energy in the Temperate but Uninhabitable Venusian Cloud Layer: What Do We Want to Know?", <i>Astrobiology</i> </li>
-      <li class='w3-hover-gray'> Cockell C.S., Wordsworth, R., Whiteford, N.P., <b>Higgins P.M.</b> (<i>in review</i>) "Minimum units of habitability and their abundance in the universe", <i>Astrobiology</i> </li>
+
+      <table style="width:100%">
+          <tr>
+              <th>Reference</th>
+              <th class='w3-center'>doi</th>
+              <th class='w3-center'>OA/preprint</th>
+          </tr>
+          <tr class='w3-hover-gray'>
+              <td> <b>Higgins, P.M.</b> & Cockell C.S. (2020) "A bioenergetic model to predict habitability, biomass and biosignatures in astrobiology and extreme conditions", <i>J. R. Soc. Interface</i> <b>17</b> 20200588 </td>
+              <td class='w3-center'> <a href='http://doi.org/10.1098/rsif.2020.0588'> 10.1098/rsif.2020.0588 </a> </td>
+              <td class='w3-center'> <a href="https://pmhiggins.github.io/papers/Higgins_Bioenergetic_2020_Interface.pdf" target="_blank">preprint</a> </td>
+          </tr>
+          <tr class='w3-hover-gray'>
+              <td> Cockell C.S., <b>Higgins P.M.</b>, Johnstone, A.A. <i>(accepted)</i> "Biologically Available Chemical Energy in the Temperate but Uninhabitable Venusian Cloud Layer: What Do We Want to Know?", <i>Astrobiology</i> </td>
+              <td 'w3-center'> </td>
+              <td 'w3-center'> </td>
+          </tr>
+          <tr class='w3-hover-gray'>
+              <td> Cockell C.S., Wordsworth, R., Whiteford, N.P., <b>Higgins P.M.</b> <i>(in review)</i> "Minimum units of habitability and their abundance in the universe", <i>Astrobiology</i> </li> </td>
+              <td class='w3-center'>  </td>
+              <td class='w3-center'>  </td>
+          </tr>
+          <tr class='w3-hover-gray'>
+              <td> Seeburger L.M.R., <b>Higgins P.M.</b>, Whiteford, N.P., Cockell C.S. <i>(submitted)</i> "Linking microbial activity to planetary spectra: CH4 biosignatures on an Archean-Earth-like exoplanet", <i>Astrobiology</i> </li> </td>
+              <td class='w3-center'>  </td>
+              <td class='w3-center'>  </td>
+          </tr>
+      </table>
+
     </ul>
 
   <!-- End Portfolio Section -->
