@@ -62,6 +62,8 @@
       scroll-behavior: smooth;
     }
 
+    .w3-container { padding: 20px}
+
     </style>
 </head>
 
@@ -313,6 +315,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="w3-justify w3-padding-large" id="projects">
     <h1 class='w3-padding-large w3-center w3-xxxlarge'><b>Projects</b></h1>
     <!-- <hr style="width:200px" class="w3-opacity"> -->
+
+    <div class="w3-cell-row w3-justify w3-padding w3-hide-small" style='border-spacing:10px'>
+    <!-- Currently slated to hide on small screens - set up a card style for small screens in future using w3-card and no cells or containers etc -->
+
+        <!-- <div class='w3-third w3-margin-bottom w3-padding'> -->
+        <div class='w3-container w3-cell w3-white w3-card' style='width:30%'>
+        <!-- <div class='w3-card w3-white' style='width:90%; height:100%'> -->
+            <h2 class='w3-padding-large w3-center'>NutMEG</h2>
+            <img src="fig/NutMEG.JPG" alt="NutMEG logo" class="w3-image">
+            <div class='w3-container'>
+                <p class='w3-padding-large'>
+                    <a href='https://github.com/pmhiggins/NutMEG/'>NutMEG</a> [Nutrients, Maintenance, Energy and Growth] is a python module for predicting the growth behaviour of microbial organisms in astrobiology. It’s designed to estimate the energetic availability through local chemistry and the cost of defending against extreme or adverse conditions to work out whether an environment could be habitable and how biology could behave there.
+
+                    You can check out <a href='https://nutmeg-astrobiology.readthedocs.io/'>NutMEG's documentation</a> <a href='docs/html/guides/coreconcept.html'>[mirror]</a>, or go straight to the code on <a href='https://github.com/pmhiggins/NutMEG/'>GitHub</a>.
+                </p>
+        <!-- </div> -->
+
+        </div>
+    </div>
+
+
+
+    <!-- <div class='w3-third w3-padding'> -->
+        <div class='w3-card w3-white w3-container w3-cell'  style='width:30%'>
+            <h2 class='w3-padding-large w3-center'>Habitability</h2>
+            <img src="fig/MP_TpH.gif" alt="Maintenance" class="w3-image" width=300>
+            <img src="fig/cb_Perm.gif" alt="Maintenance" class="w3-image" width="60">
+            <img src="fig/cb_MP.png" alt="Maintenance" class="w3-image" width="60">
+            <div class='w3-container'>
+                <p class='w3-padding-large'>
+                    The more 'extreme' an environment is, the more difficult it is to survive in. For example, at high temperatures or adverse pH it becomes more difficult for life to maintain the structure of important biomolecules like proteins and DNA.
+                    <br><br>
+                    One method I employ to predict the energetic costs of survival is considering the potential adverse effects of the local environment. The cumulative energy costs of multiple extremes and poor microbial adaptation results in large deficits to overcome, as shown in the animation - just one combination of several potential adaptations NutMEG can simulate.
+                </p>
+        </div>
+    <!-- </div> -->
+
+    </div>
+
+    <!-- <div class='w3-third w3-padding'> -->
+    <div class='w3-card w3-white w3-container w3-cell'  style='width:30%'>
+            <h2 class='w3-padding-large w3-center'>Enceladus</h2>
+            <img src="fig/FreeEnergy.png" alt="Enceladus" class="w3-image">
+            <div class='w3-container'>
+                <p class='w3-padding-large'>
+                    Enceladus has a large subsurface ocean of water, and the Cassini spacecraft’s observations point to the existence of CH4, CO2, and H2 - the ingredients of the methanogenesis metabolism - as well as various salts, silicates and alkanes. These make it a primary candidate in the search for extraterrestrial life in the solar system. However, other key parameters of the ocean which we need to know to determine its habitability are difficult to calculate, such as the pH and composition. I have been using NutMEG to predict what possible combinations of Enceladus' parameter space could be habitable to Earth-like life.
+                    <br><br>
+                    The figure here shows an early estimation of the energy available via methanogenesis in an Enceladean ocean when heated to different temperatures (Higgins et al., 2021). Our predictions have come a long way since this - on to biomass and biosignature estimates - so check back for updates!
+                </p>
+        </div>
+        <!-- </div> -->
+    </div>
+
+    </div>
+
+    <div class='w3-third w3-margin-bottom'>
+    <div class='w3-card w3-white  w3-padding'>
+        <h2 class='w3-padding-large w3-center'>NutMEG</h2>
+        <img src="fig/NutMEG.JPG" alt="NutMEG logo" class="w3-image">
+        <div class='w3-container'>
+            <p class='w3-padding-large'>
+                <a href='https://github.com/pmhiggins/NutMEG/'>NutMEG</a> [Nutrients, Maintenance, Energy and Growth] is a python module for predicting the growth behaviour of microbial organisms in astrobiology. It’s designed to estimate the energetic availability through local chemistry and the cost of defending against extreme or adverse conditions to work out whether an environment could be habitable and how biology could behave there.
+
+                You can check out <a href='https://nutmeg-astrobiology.readthedocs.io/'>NutMEG's documentation</a> <a href='docs/html/guides/coreconcept.html'>[mirror]</a>, or go straight to the code on <a href='https://github.com/pmhiggins/NutMEG/'>GitHub</a>.
+            </p>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
 
     <!-- add w3-content to these divs to make it inset slightly -->
     <div class="w3-row w3-justify w3-padding-32">
