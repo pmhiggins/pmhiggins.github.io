@@ -23,6 +23,17 @@
     })(window,document,'script','dataLayer','GTM-K4PKL6R');</script>
     <!-- End Google Tag Manager -->
 
+    <script>
+    function PhoneAccordion(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    } else {
+    x.className = x.className.replace(" w3-show", "");
+    }
+    }
+    </script>
+
     <title>Pete M Higgins</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +41,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+
     <script src="https://kit.fontawesome.com/8c46e15328.js" crossorigin="anonymous"></script>
 
     <style>
@@ -55,12 +68,14 @@
     }
 
     th {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.2);
     }
 
     html {
       scroll-behavior: smooth;
     }
+
+    .w3-container { padding: 20px}
 
     </style>
 </head>
@@ -79,13 +94,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <a href="#publications" class="w3-bar-item w3-button w3-padding-32 w3-hover-light-gray">
-    <i class="glyphicon glyphicon-book w3-xxlarge"></i>
-    <p>PUBLICATIONS</p>
-  </a>
   <a href="#projects" class="w3-bar-item w3-button w3-padding-32 w3-hover-light-gray">
     <i class="fa fa-lightbulb w3-xxlarge"></i>
     <p>PROJECTS</p>
+  </a>
+  <a href="#publications" class="w3-bar-item w3-button w3-padding-32 w3-hover-light-gray">
+    <i class="glyphicon glyphicon-book w3-xxlarge"></i>
+    <p>PUBLICATIONS</p>
   </a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-32 w3-hover-light-gray">
     <i class="fa fa-envelope w3-xxlarge"></i>
@@ -97,8 +112,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="w3-top w3-hide-large" id="myNavbar">
   <div class="w3-bar w3-deep-purple w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#publications" class="w3-bar-item w3-button" style="width:25% !important">PUBLICATIONS</a>
     <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <a href="#publications" class="w3-bar-item w3-button" style="width:25% !important">PUBLICATIONS</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
 </div>
@@ -120,8 +135,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class='w3-padding-large'>
         <p class='w3-padding-large w3-large'> I'm a Postdoctoral Fellow in the Stable Isotope Lab at the University of Toronto. I examine how thermodynamic principles control whether or not life can survive, grow and/or evolve in various physico-chemical settings. To do so, I develop and employ computational models which: i) assess dynamic habitability, ii) constrain possible biomass levels, and iii) estimate biosignature production and detectability against an abiotic background. The universal nature of these laws allows us to examine environments throughout the cosmos, from deep earth through deep time, to the oceans of icy moons in the outer solar system, and even exoplanets around distant stars.<br><br>
 
-        PhD: Astrobiology, University of Edinburgh 2022 <br>
-        MSci: Natural Sciences, Lancaster University 2017
+        <b>Postdoc:</b>   University of Toronto 2022- <br>
+        <b>PhD:</b>   Astrobiology, University of Edinburgh 2022 <br>
+        <b>MSci:</b>   Natural Sciences, Lancaster University 2017
         </p>
         </div>
     </div>
@@ -131,25 +147,233 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
   </header>
 
-  <!-- Portfolio Section -->
-  <div class="w3-padding-32 w3-content" id="publications">
+
+
+
+
+
+  <!-- Projects Section -->
+  <div class="w3-justify" id="projects">
+    <h1 class='w3-padding w3-center w3-xxxlarge'><b>Projects</b></h1>
+    <!-- <hr style="width:200px" class="w3-opacity"> -->
+    <p class='w3-center'><i>These are my current research interests. Contact me if you are interested in collaborating or taking on a student project in one of these areas!</i></p>
+
+
+    <!-- For large screens  -->
+    <div class="w3-cell-row w3-padding w3-hide-small w3-hide-medium" style='border-spacing:10px'>
+
+      <div class='w3-container w3-cell w3-white w3-card' style='width:32%'>
+      <h2 class='w3-padding-large w3-center'>NutMEG</h2>
+      <img src="fig/banners/NutMEG_logo.jpg" alt="NutMEG logo" class="w3-image">
+      <div class='w3-container'>
+      <p>
+        <a href='https://github.com/pmhiggins/NutMEG/'>NutMEG</a> is a python module for predicting the growth behaviour of microbial organisms in astrobiology. It’s flexibly designed for astrobiologsts to assess habitablility, biomass potential, and biosignature production in a variety of setings.
+        <br><br>
+        Check out <a href='https://nutmeg-astrobiology.readthedocs.io/'>NutMEG's documentation!</a> <a href='docs/html/guides/coreconcept.html'>[mirror]</a> Or, go straight to the code on <a href='https://github.com/pmhiggins/NutMEG/'>GitHub</a>.
+        </p>
+      </div>
+      </div>
+
+      <div class='w3-card w3-white w3-container w3-cell'  style='width:32%'>
+      <h2 class='w3-padding-large w3-center'>Habitability</h2>
+      <img src="fig/banners/Maintenance.jpg" alt="Maintenance" class="w3-image">
+      <div class='w3-container'>
+      <p>
+        Image: Higgins (2022) <a href="https://era.ed.ac.uk/handle/1842/38824" target="_blank">[link]</a>
+        <br><br>
+        To be habitable, an environment needs enough energy and nutrients for life to beat out the costs of survival. This is something we can quantify.
+        <br><br>
+        For example, at high temperatures or adverse pH it becomes more difficult for life to maintain the structure of important biomolecules like proteins and DNA.
+      </p>
+      </div>
+      </div>
+
+
+      <div class='w3-card w3-black w3-container w3-cell'  style='width:32%'>
+      <h2 class='w3-padding-large w3-center'>Icy Moons</h2>
+      <img src="fig/banners/EnceladusEuropaTitan.jpg" alt="Icy Moons of the Solar System" class="w3-image">
+      <div class='w3-container'>
+      <p>
+        Image credits: NASA
+        <br><br>
+        Enceladus, Europa and Titan have subsurface water oceans and may be habitable. Energy and nutrients for life can be delivered to them via water-rock reactions at their seafloors, or from above through their icy surfaces. Any local ecosysems could be very different to most of life on Earth, as photosynthesis is probably not viable.
+      </p>
+      </div>
+      </div>
+
+    <!-- End of row -->
+    </div>
+
+    <div class="w3-cell-row w3-padding w3-hide-small w3-hide-medium" style='border-spacing:10px'>
+
+      <div class='w3-container w3-cell w3-highway-brown w3-card' style='width:32%'>
+      <h2 class='w3-padding-large w3-center'>Deep Earth &  Rocky Crusts</h2>
+      <img src="fig/banners/DeepEarthWater.jpeg" alt="Water processes in Earth's deep crust" class="w3-image">
+      <div class='w3-container'>
+      <p>
+          Image: Sherwood Lollar et al. (2024) <a href="https://doi.org/10.1146/annurev-earth-040722-102252" target="_blank">[link]</a>
+          <br><br>
+          Earth’s subsurface is teeming with life, but little is known about the full spectrum and limits of habitability within its diverse and difficult-to-access settings. The deep crust in particular hosts a variety of 'extreme', often-isolated waters that are analogs for putative habitats in other rocky crusts, such as on Mars.
+          <br><br>
+          These settings and their habitats are also of interest for economic H2 and He production/storage, CCS, and nuclear waste management.
+      </p>
+      </div>
+      </div>
+
+      <div class='w3-card w3-white w3-container w3-cell'  style='width:32%'>
+      <h2 class='w3-padding-large w3-center'>Biosignatures</h2>
+      <img src="fig/banners/EnceladusBioticC.jpg" alt="Maintenance" class="w3-image">
+      <div class='w3-container'>
+      <p>
+        Image: Higgins et al. (2024) <a href="https://doi.org/10.1029/2023JE008166" target="_blank">[link]</a>
+        <br><br>
+        One way to identify candidate worlds for life detection missions is to demonstrate, through several lines of evidence, that data we have collected already may contain signs of biology. This can be through metabolic by-products, isotopic fractionation, particular properties of organic chemical species, etc. These signals can also help us work out what else a biosphere, if present, might be doing.
+        <br><br>
+        Crucially, analysing biosignatures requires we evaluate how they compare against the 'abiotic background'. Which, on exotic extraterrestrial geologies, can be difficult to constrain.
+      </p>
+      </div>
+      </div>
+
+
+      <div class='w3-card w3-black w3-container w3-cell'  style='width:32%'>
+      <h2 class='w3-padding-large w3-center'>Exoplanets & Exomoons</h2>
+      <img src="fig/banners/MilkyWay.jpg" alt="The Milky Way Galaxy" class="w3-image">
+      <div class='w3-container'>
+      <p>
+        Image credits: NASA
+        <br><br>
+        Current and future space telescopes will gleam ever-more insight on planets orbiting other stars. However, the challenges of exoplanet astrobiology are very different than those in the solar system, because there is much less world-specific data, but larger sample sizes and planetary diversity. Reliably inferring habitability, biomass and biosignature potential on these extrasolar worlds is going to be a major scientific challenge in the coming decades.
+      </p>
+      </div>
+      </div>
+
+    <!-- End of row -->
+    </div>
+
+
+    <!-- For small/medum screens -->
+    <div class="w3-padding w3-hide-large">
+
+            <div class='w3-white w3-card' style='width:100%'>
+            <h2 class='w3-padding-large w3-center'>NutMEG</h2>
+            <img src="fig/banners/NutMEG_logo.jpg" alt="NutMEG logo" class="w3-image">
+            <button onclick="PhoneAccordion('NutMEG')" class="w3-btn w3-block w3-light-gray">
+            ⌄ More ⌄</button>
+            <div id="NutMEG" class="w3-hide w3-center">
+                <p class="w3-padding-large">
+                  <a href='https://github.com/pmhiggins/NutMEG/'>NutMEG</a> is a python module for predicting the growth behaviour of microbial organisms in astrobiology. It’s flexibly designed for astrobiologsts to assess habitablility, biomass potential, and biosignature production in a variety of setings.
+                  <br><br>
+                  Check out <a href='https://nutmeg-astrobiology.readthedocs.io/'>NutMEG's documentation!</a> <a href='docs/html/guides/coreconcept.html'>[mirror]</a> Or, go straight to the code on <a href='https://github.com/pmhiggins/NutMEG/'>GitHub</a>.
+                  </p>
+            </div>
+            </div>
+
+            <div class='w3-card w3-white'  style='width:100%'>
+            <h2 class='w3-padding-large w3-center'>Habitability</h2>
+            <img src="fig/banners/Maintenance.jpg" alt="Maintenance" class="w3-image">
+            <p class="w3-center"> Image: Higgins (2022) <a href="https://era.ed.ac.uk/handle/1842/38824" target="_blank">[link]</a> </p>
+            <button onclick="PhoneAccordion('Habitability')" class="w3-btn w3-block w3-light-gray">
+            ⌄ More ⌄</button>
+            <div id="Habitability" class="w3-hide w3-center">
+                <p class='w3-padding-large'>
+                  To be habitable, an environment needs enough energy and nutrients for life to beat out the costs of survival. This is something we can quantify.
+                  <br><br>
+                  For example, at high temperatures or adverse pH it becomes more difficult for life to maintain the structure of important biomolecules like proteins and DNA.
+                </p>
+            </div>
+            </div>
+
+
+            <div class='w3-card w3-black'  style='width:100%'>
+            <h2 class='w3-padding-large w3-center'>Icy Moons</h2>
+            <img src="fig/banners/EnceladusEuropaTitan.jpg" alt="Icy Moons of the Solar System" class="w3-image">
+            <p class="w3-center"> Image credits: NASA </p>
+            <button onclick="PhoneAccordion('IcyMoons')" class="w3-btn w3-block w3-light-gray">
+            ⌄ More ⌄</button>
+            <div id="IcyMoons" class="w3-hide w3-center">
+            <p class='w3-padding-large'>
+              Enceladus, Europa and Titan have subsurface water oceans and may be habitable. Energy and nutrients for life can be delivered to them via water-rock reactions at their seafloors, or from above through icy surfaces. Any local ecosysems could be very different to most of life on Earth, as photosynthesis is probably not viable.
+            </p>
+            </div>
+            </div>
+
+
+            <div class='w3-highway-brown w3-card' style='width:100%'>
+            <h2 class='w3-padding-large w3-center'>Deep Earth &  Rocky Crusts</h2>
+            <img src="fig/banners/DeepEarthWater.jpeg" alt="Water processes in Earth's deep crust" class="w3-image">
+            <p class="w3-center"> Image: Sherwood Lollar et al. (2024) <a href="https://doi.org/10.1146/annurev-earth-040722-102252" target="_blank">[link]</a> </p>
+            <button onclick="PhoneAccordion('Crusts')" class="w3-btn w3-block w3-brown">
+            ⌄ More ⌄</button>
+            <div id="Crusts" class="w3-hide w3-center">
+            <p class='w3-padding-large'>
+              Earth’s subsurface is teeming with life, but little is known about the full spectrum and limits of habitability within its diverse and difficult-to-access settings. The deep crust in particular hosts a variety of `extreme', often-isolated waters that are analogs for putative habitats in other rocky crusts, such as on Mars.
+              <br><br>
+              These settings and their habitats are also of interest for economic H2 and He production/storage, CCS, and nuclear waste management.
+            </p>
+            </div>
+            </div>
+
+            <div class='w3-card w3-white'  style='width:100%'>
+            <h2 class='w3-padding-large w3-center'>Biosignatures</h2>
+            <img src="fig/banners/EnceladusBioticC.jpg" alt="Maintenance" class="w3-image">
+            <p class="w3-center"> Image: Higgins et al. (2024) <a href="https://doi.org/10.1029/2023JE008166" target="_blank">[link]</a></a> </p>
+            <button onclick="PhoneAccordion('Biosig')" class="w3-btn w3-block w3-light-gray">
+            ⌄ More ⌄</button>
+            <div id="Biosig" class="w3-hide w3-center">
+            <p class='w3-padding-large'>
+              One way to identify candidate worlds for life detection missions is to demonstrate, through several lines of evidence, that data we have collected already may contain signs of biology. This can be through metabolic by-products, isotopic fractionation, particular properties of organic chemical species, etc. These signals can also help us work out what else a biosphere, if present, might be doing.
+              <br><br>
+              Crucially, analysing biosignatures requires we evaluate how they compare against the `abiotic background'. Which, on exotic extraterrestrial geologies, can be difficult to constrain.
+            </p>
+            </div>
+            </div>
+
+
+            <div class='w3-card w3-black'  style='width:100%'>
+            <h2 class='w3-padding-large w3-center'>Exoplanets & Exomoons</h2>
+            <img src="fig/banners/MilkyWay.jpg" alt="The Milky Way Galaxy" class="w3-image">
+            <!-- <div class='w3-container'> -->
+            <p class="w3-center"> Image credits: NASA </p>
+            <button onclick="PhoneAccordion('Exoplanets')" class="w3-btn w3-block w3-light-gray">
+            ⌄ More ⌄</button>
+            <div id="Exoplanets" class="w3-hide w3-center">
+            <p class='w3-padding-large'>
+              Current and future space telescopes will gleam ever-more insight on planets orbiting other stars. However, the challenges of exoplanet astrobiology are very different than those in the solar system, because we have much less world-specific data, but larger sample sizes and planetary diversity. Reliably inferring habitability, biomass and biosignature potential on these extrasolar worlds is going to be a major scientific challenge in the coming decades.
+            </p>
+            </div>
+            </div>
+
+    </div>
+
+
+  <!-- End Projects Section -->
+  </div>
+
+
+
+
+
+
+
+  <!-- Publications Section -->
+  <div class='w3-content' id="publications">
     <h1 class='w3-padding-large w3-center w3-xxxlarge'><b>Publications and Presentations</b></h1>
     <hr style="width:200px" class="w3-opacity">
 
-    <ul class="w3-ul">
-      <li><h2>Publications</h2></li>
-      <li><i>Sorted by most recent; several more in review! Last citations scrape: April 11 2024</i></li>
-      <table style="width:100%">
-          <col style="width:60%">
+
+      <h2>Publications</h2>
+      <i>Sorted by most recent; several more in review! Last citations scrape: April 11 2024</i>
+      <table class='w3-card' style="width:100%">
+          <col style="width:62%">
 	      <col style="width:10%">
-	      <col style="width:25%">
+	      <col style="width:28%">
           <tr>
               <th>Reference</th>
               <th class='w3-center'>Open Access?</th>
               <th class='w3-center'>Metrics</th>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td>Sherwood Lollar B.S., Warr O., <b>Higgins P.M.</b> (2024) "The Hidden Hydrogeosphere: The Contribution of Deep Groundwater to the Planetary Water Cycle"  <i>Annual Review of Earth and Planetary Sciences</i> <b>52</b> DOI: <a href="https://doi.org/10.1146/annurev-earth-040722-102252" target="_blank"> 10.1146/annurev-earth-040722-102252</a></td>
           <td class='w3-center'>TBC (est. May 2024)</td>
           <td class='w3-center'>
@@ -158,7 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td><b>Higgins P.M.</b>, Chen W., Glein C.R., Cockell C.S., Sherwood Lollar B. (2024) "Quantifying Uncertainty in Sustainable Biomass and Production of Biotic Carbon in Enceladus' Notional Methanogenic Biosphere"  <i>JGR: Planets</i> <b>129</b> (3) e2023JE008166 DOI: <a href="https://doi.org/10.1029/2023JE008166" target="_blank"> 10.1029/2023JE008166</a></td>
           <td class='w3-center'><a href=https://doi.org/10.1029/2023JE008166 target="_blank"> Publisher</a></td>
           <td class='w3-center'>
@@ -167,7 +391,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td>Ortega-Arzola E., <b>Higgins P.M.</b>, Cockell C.S.  (2024) "The minimum energy required to build a cell"  <i>Scientific Reports</i> <b>14</b> 5267 DOI: <a href="https://doi.org/10.1038/s41598-024-54303-6" target="_blank"> 10.1038/s41598-024-54303-6</a></td>
           <td class='w3-center'><a href=https://doi.org/10.1038/s41598-024-54303-6 target="_blank"> Publisher</a></td>
           <td class='w3-center'>
@@ -176,7 +400,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td>Neish C., Malaska M.J., Sotin C., Lopes R.M., Nixon C.A., Affholder A., Chatain A., Cockell C., Farnsworth K.K., <b>Higgins P.M.</b>, Miller K.E and Soderlund K.M. (2024) "Organic Input to Titan's Subsurface Ocean Through Impact Cratering"  <i>Astrobiology</i> <b>20</b> (2) 177-189 DOI: <a href="https://doi.org/10.1089/ast.2023.0055" target="_blank"> 10.1089/ast.2023.0055</a></td>
           <td class='w3-center'><a href=https://www.researchgate.net/publication/377929149_Organic_Input_to_Titan%27s_Subsurface_Ocean_Through_Impact_Cratering target="_blank"> ResearchGate</a></td>
           <td class='w3-center'>
@@ -186,7 +410,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td>Cockell C.S., Simons M., Castillo-Rogez J., <b>Higgins P.M.</b>, Kaltenegger L., Keane J.T., Leonard E.J., Mitchell K.L., Park R.S., Perl S.M., Vance S.D. (2024) "Sustained and comparative habitability beyond Earth"  <i>Nature Astronomy</i> <b>8</b> 30-38 DOI: <a href="https://doi.org/10.1038/s41550-023-02158-8" target="_blank"> 10.1038/s41550-023-02158-8</a></td>
           <td class='w3-center'><a href=https://web.gps.caltech.edu/users/simons/publications/pdfs/Cockell_etal_2024_Nature.pdf target="_blank"> Caltech</a></td>
           <td class='w3-center'>
@@ -196,7 +420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td>Seeburger R., <b>Higgins P.M.</b>, Whiteford N.P., Cockell C.S. (2023) "Linking Methanogenesis in Low-Temperature Hydrothermal Vent Systems to Planetary Spectra: Methane Biosignatures on an Archean-Earth-like Exoplanet"  <i>Astrobiology</i> <b>23</b> (4) 415-430 DOI: <a href="https://doi.org/10.1089/ast.2022.0127" target="_blank"> 10.1089/ast.2022.0127</a></td>
           <td class='w3-center'><a href=https://doi.org/10.1089/ast.2022.0127 target="_blank"> Publisher</a></td>
           <td class='w3-center'>
@@ -206,7 +430,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td><b>Higgins P.M.</b> (2022) "Modelling extraterrestrial habitability, biomass and biosignatures through the bioenergetic lens"  <i>The University of Edinburgh</i> DOI: <a href="https://doi.org/10.7488/era/2078" target="_blank"> 10.7488/era/2078</a></td>
           <td class='w3-center'><a href=https://era.ed.ac.uk/handle/1842/38824 target="_blank"> ERA</a></td>
           <td class='w3-center'>
@@ -216,7 +440,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td><b>Higgins P.M.</b>, Glein C.R., Cockell C.S. (2021) "Instantaneous habitable windows in the parameter space of Enceladus' ocean"  <i>JGR: Planets</i> <b>126</b> (11) e2021JE006951 DOI: <a href="https://doi.org/10.1029/2021JE006951" target="_blank"> 10.1029/2021JE006951</a></td>
           <td class='w3-center'><a href=https://doi.org/10.1029/2021JE006951 target="_blank"> Publisher</a></td>
           <td class='w3-center'>
@@ -226,7 +450,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td>Cockell C.S., <b>Higgins P.M.</b>, Johnstone A.A. (2021) "Biologically available chemical energy in the temperate but uninhabitable Venusian cloud layer: What do we want to know?"  <i>Astrobiology</i> <b>21</b> (10) 1224-1236 DOI: <a href="https://doi.org/10.1089/ast.2020.2280" target="_blank"> 10.1089/ast.2020.2280</a></td>
           <td class='w3-center'><a href=https://www.researchgate.net/publication/348634534_Special_Collection_Venus_Biologically_Available_Chemical_Energy_in_the_Temperate_but_Uninhabitable_Venusian_Cloud_Layer_What_Do_We_Want_to_Know target="_blank"> ResearchGate</a></td>
           <td class='w3-center'>
@@ -236,7 +460,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td>Cockell C.S., Wordsworth R., Whiteford N.P., <b>Higgins P.M.</b> (2021) "Minimum units of habitability and their abundance in the universe"  <i>Astrobiology</i> <b>21</b> (4) 481-489 DOI: <a href="https://doi.org/10.1089/ast.2020.2350" target="_blank"> 10.1089/ast.2020.2350</a></td>
           <td class='w3-center'><a href=https://www.researchgate.net/publication/348897179_Minimum_Units_of_Habitability_and_Their_Abundance_in_the_Universe target="_blank"> ResearchGate</a></td>
           <td class='w3-center'>
@@ -246,7 +470,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td>Gault S.A, <b>Higgins P.M.</b>, Cockell C.S., Gillies K. (2021) "A meta-analysis of the activity, stability, and mutational characteristics of temperature-adapted enzymes"  <i>Bioscience Reports</i> <b>41</b> (4) BSR20210336 DOI: <a href="https://doi.org/10.1042/BSR20210336" target="_blank"> 10.1042/BSR20210336</a></td>
           <td class='w3-center'><a href=https://doi.org/10.1042/BSR20210336 target="_blank"> Publisher</a></td>
           <td class='w3-center'>
@@ -256,7 +480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </td>
           </tr>
 
-          <tr class='w3-hover-gray'>
+          <tr class='w3-white w3-hover-light-gray'>
           <td><b>Higgins P.M.</b> & Cockell C.S. (2020) "A bioenergetic model to predict habitability, biomass and biosignatures in astrobiology and extreme conditions"  <i>J. R. Soc. Interface</i> <b>17</b> (171) 20200588 DOI: <a href="https://doi.org/10.1098/rsif.2020.0588" target="_blank"> 10.1098/rsif.2020.0588</a></td>
           <td class='w3-center'><a href=http://doi.org/10.1098/rsif.2020.0588 target="_blank"> Publisher</a></td>
           <td class='w3-center'>
@@ -271,37 +495,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </table>
 
 
-      <!-- <li><h2>Publications in-the-works</h2></li>
-      <table style="width:100%">
-          <col style="width:60%">
-	      <col style="width:20%">
-          <tr>
-              <th>Reference</th>
-              <th class='w3-center'>Progress</th>
-          </tr>
-          <tr class='w3-hover-gray'>
-              <td> Ortega-Arzola E.J., <b>Higgins P.M.</b>, Cockell C.S. <i>(in prep)</i> "Biogenesis energetics: A model to understand the energy necessary to synthesise a cell (WT)", </li> </td>
-              <td class='w3-center'> Hopefully submitting soon! </td>
-          </tr>
-          <tr class='w3-hover-gray'>
-              <td> <b>Higgins P.M.</b> et al. <i>(early prep)</i> "Controls on biomass and biosignatures in Enceladus' ocean (WT)", </li> </td>
-              <td class='w3-center'> Early days, but core results are looking good!  </td>
-          </tr>
+      <h2>Presentations</h2>
+      <i>Only includes presentation with Pete as first author</i>
+      <ul class="w3-ul w3-card">
 
-      </table> -->
-
-      <li><h2>Presentations</h2></li>
-      <li><i>Only includes presentation with Pete as first author</i></li>
-      <li class='w3-hover-gray'>AGU Fall Meeting (2023), Oral Presentation: "Uncertainty in Habitability and Sustainable Biomass for a Hypothetical Methanogenic Biosphere on Enceladus".</li>
-      <li class='w3-hover-gray'>CIFAR Earth-4D Program Meeting (2023), Poster Presentation: "Probabilistic Habitability Near and Far".</li>
-      <li class='w3-hover-gray'>Royal Observatory of Edinburgh Colloquium (2020), Invited Seminar: "Predicting Energy Flow and Biomass in Extreme and Extraterrestrial Environments".</li>
-      <li class='w3-hover-gray'>AGU Fall Meeting (2020), Poster Presentation: “Nutrients, Maintenance, Energy and Growth: predicting habitability, biomass and biosignatures from limited datasets”.</li>
-      <li class='w3-hover-gray'>AbSciCon (2019), Oral Presentation: “The Energetic Habitability of Enceladus may be Tenuous”.</li>
-      <li class='w3-hover-gray'>ASB (2019), Oral Presentation: “The Energetic Habitability of Enceladus may be Tenuous”.</li>
-      <li class='w3-hover-gray'>LPSC (2019), ePoster Presentation: “A Power Driven Model for Predicting Microbial Growth in Poorly Characterised Environments”.</li>
-      <li class='w3-hover-gray'>EANA (2018), Poster Presentation: “A new model to estimate energy flow and biomass in terrestrial and extraterrestrial environments”. </li>
-      <li class='w3-hover-gray'>EANA (2018), Oral Presentation: “A new model to estimate energy flow and biomass in terrestrial and extraterrestrial environments” <br><b>Won student contest 2018 for best talk</b>. </li>
-      <li class='w3-hover-gray'>GMBN RiP (2018), Poster Presentation: “A new model to estimate energy flow and biomass in terrestrial and extraterrestrial environments”. </li>
+      <li class='w3-white w3-hover-light-gray'>AGU Fall Meeting (2023), Oral Presentation: "Uncertainty in Habitability and Sustainable Biomass for a Hypothetical Methanogenic Biosphere on Enceladus".</li>
+      <li class='w3-white w3-hover-light-gray'>CIFAR Earth-4D Program Meeting (2023), Poster Presentation: "Probabilistic Habitability Near and Far".</li>
+      <li class='w3-white w3-hover-light-gray'>Royal Observatory of Edinburgh Colloquium (2020), Invited Seminar: "Predicting Energy Flow and Biomass in Extreme and Extraterrestrial Environments".</li>
+      <li class='w3-white w3-hover-light-gray'>AGU Fall Meeting (2020), Poster Presentation: “Nutrients, Maintenance, Energy and Growth: predicting habitability, biomass and biosignatures from limited datasets”.</li>
+      <li class='w3-white w3-hover-light-gray'>AbSciCon (2019), Oral Presentation: “The Energetic Habitability of Enceladus may be Tenuous”.</li>
+      <li class='w3-white w3-hover-light-gray'>ASB (2019), Oral Presentation: “The Energetic Habitability of Enceladus may be Tenuous”.</li>
+      <li class='w3-white w3-hover-light-gray'>LPSC (2019), ePoster Presentation: “A Power Driven Model for Predicting Microbial Growth in Poorly Characterised Environments”.</li>
+      <li class='w3-white w3-hover-light-gray'>EANA (2018), Poster Presentation: “A new model to estimate energy flow and biomass in terrestrial and extraterrestrial environments”. </li>
+      <li class='w3-white w3-hover-light-gray'>EANA (2018), Oral Presentation: “A new model to estimate energy flow and biomass in terrestrial and extraterrestrial environments” <br><b>Won student contest 2018 for best talk</b>. </li>
+      <li class='w3-white w3-hover-light-gray'>GMBN RiP (2018), Poster Presentation: “A new model to estimate energy flow and biomass in terrestrial and extraterrestrial environments”. </li>
 
     </ul>
 
@@ -309,68 +516,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
 
-  <!-- About Section -->
-  <div class="w3-justify w3-padding-large" id="projects">
-    <h1 class='w3-padding-large w3-center w3-xxxlarge'><b>Projects</b></h1>
-    <!-- <hr style="width:200px" class="w3-opacity"> -->
 
-    <!-- add w3-content to these divs to make it inset slightly -->
-    <div class="w3-row w3-justify w3-padding-32">
-        <div class='w3-third w3-padding-large w3-container'>
-            <img src="fig/NutMEG.JPG" alt="NutMEG logo" class="w3-image">
-        </div>
-        <div class="w3-twothird w3-container">
-          <h2 class='w3-padding-large w3-center'>NutMEG</h2>
-          <!-- if you want some vspace   <hr style="width:200px" class="w3-opacity"> -->
-          <p class='w3-padding-large'><a href='https://github.com/pmhiggins/NutMEG/'>NutMEG</a> [Nutrients, Maintenance, Energy and Growth] is a python module for predicting the growth behaviour of microbial organisms in astrobiology. It’s designed to estimate the energetic availability through local chemistry and the cost of defending against extreme or adverse conditions to work out whether an environment could be habitable and how biology could behave there.
-
-          You can check out <a href='https://nutmeg-astrobiology.readthedocs.io/'>NutMEG's documentation</a> <a href='docs/html/guides/coreconcept.html'>[mirror]</a>, or go straight to the code on <a href='https://github.com/pmhiggins/NutMEG/'>GitHub</a>. At the moment there is a problem with the generation of NutMEG's API on readthedocs, you can access it <a href='docs/html/source/NutMEG.html'>here</a>!
-          </p>
-        </div>
-
-    </div>
-
-    <div class="w3-row w3-justify w3-padding-32">
-
-        <div class="w3-half w3-container">
-            <h2 class='w3-padding-large w3-center'>Surviving in Extremes</h2>
-          <p class='w3-padding-large'> The more 'extreme' an environment is, the more difficult it is to survive in. For example, at high temperatures or adverse pH it becomes more difficult for life to maintain the structure of important biomolecules like proteins and DNA.
-          <br><br>
-          One method I employ to predict the energetic costs of survival is considering the potential adverse effects of the local environment. The cumulative energy costs of multiple extremes and poor microbial adaptation results in large deficits to overcome, as shown in the animation - just one combination of several potential adaptations NutMEG can simulate.
-          </p>
-        </div>
-        <div class='w3-half w3-container w3-padding-16'>
-            <img src="fig/MP_TpH.gif" alt="Maintenance" class="w3-image" width=300>
-            <img src="fig/cb_Perm.gif" alt="Maintenance" class="w3-image" width="60">
-            <img src="fig/cb_MP.png" alt="Maintenance" class="w3-image" width="60">
-
-
-        </div>
-
-    </div>
-
-
-    <div class="w3-row w3-justify w3-padding-32">
-
-        <div class='w3-third w3-container w3-center'>
-            <img src="fig/FreeEnergy.png" alt="Enceladus" class="w3-image">
-        </div>
-        <div class="w3-twothird w3-container">
-            <h2 class='w3-padding-large w3-center'>Icy moons</h2>
-          <p class='w3-padding-large'>
-          Enceladus has a large subsurface ocean of water, and the Cassini spacecraft’s observations point to the existence of CH4, CO2, and H2 - the ingredients of the methanogenesis metabolism - as well as various salts, silicates and alkanes. These make it a primary candidate in the search for extraterrestrial life in the solar system. However, other key parameters of the ocean which we need to know to determine its habitability are difficult to calculate, such as the pH and composition. I have been using NutMEG to predict what possible combinations of Enceladus' parameter space could be habitable to Earth-like life.
-          <br><br>
-          The figure here shows an early estimation of the energy available via methanogenesis in an Enceladean ocean when heated to different temperatures (Higgins et al., 2021). Our predictions have come a long way since this - on to biomass and biosignature estimates - so check back for updates!
-          </p>
-          <!-- uncomment to add progress bars
-          <p class="w3-padding-large w3-wide">Photography</p>
-          <div class="w3-white">
-            <div class="w3-dark-grey" style="height:28px;width:95%"></div>
-          </div> -->
-        </div>
-    </div>
-  <!-- End Projects Section -->
-  </div>
 
   <!-- adding cv to github and linking near the top could be a good idea
       <button class="w3-button w3-light-grey w3-padding-large w3-section">
