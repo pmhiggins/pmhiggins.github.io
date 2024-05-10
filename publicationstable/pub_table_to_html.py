@@ -24,7 +24,7 @@ for i in range(len(df)):
 
     print(thisref)
 
-    refsec = "<tr class='w3-hover-gray'>\n<td>"+thisref+"</td>\n"
+    refsec = "<tr class='w3-white w3-hover-light-gray'>\n<td>"+thisref+"</td>\n"
     if pd.isna(loc.loc['OA-link']):
         refsec += "<td class='w3-center'>" + loc.loc['OA-label'] +"</td>\n"
     else:
